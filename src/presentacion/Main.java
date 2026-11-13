@@ -26,7 +26,7 @@ public class Main {
 
         System.out.println(ludoteca);
 
-        Videojuego encontrado = ludoteca.buscarPorTitulo("Minecraft"); //Aqui probamos si encuentra el videojuego o no, null es que no
+        Videojuego encontrado = ludoteca.buscarPorTitulo("Skyrim"); //Aqui probamos si encuentra el videojuego o no, null es que no
         System.out.println("Videojuego: " + encontrado);
     }
 }

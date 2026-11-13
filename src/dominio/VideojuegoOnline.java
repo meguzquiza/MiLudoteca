@@ -6,7 +6,7 @@ public class VideojuegoOnline extends Videojuego {
 
     public VideojuegoOnline(String titulo, String plataforma, int puntuacion, int horasJugadas, int numeroJugadoresOnline) {
 
-        super(titulo, plataforma, puntuacion, horasJugadas);
+        super(titulo, plataforma, puntuacion, horasJugadas);     // Usamos el constructor del padre para inicializar los datos que heredamos.
 
         this.numeroJugadoresOnline = numeroJugadoresOnline;
     }
@@ -25,7 +25,7 @@ public class VideojuegoOnline extends Videojuego {
     }
     @Override
     public String toString() {
-        return super.toString() + ", Número jugadores: " + numeroJugadoresOnline;
+        return super.toString() + ", Número jugadores: " + numeroJugadoresOnline;      //con super.ToString usamos el ToString ya existente en la clase padre y añadimos su nuevo atributo
     }
 
 }
