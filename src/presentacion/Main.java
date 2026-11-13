@@ -1,6 +1,10 @@
 package presentacion;
 
 import dominio.Videojuego;
+import dominio.VideojuegoDeportivo;
+import dominio.VideojuegoEstrategia;
+import dominio.VideojuegoOnline;
+import dominio.VideojuegoRol;
 import dominio.Ludoteca;
 
 public class Main {
@@ -14,6 +18,11 @@ public class Main {
         ludoteca.agregar(new Videojuego("God of War", "PS5", 94, 60));
         ludoteca.agregar(new Videojuego("Super Mario Odyssey", "Switch", 92, 45));
         ludoteca.agregar(new Videojuego("Cyberpunk 2077", "PC", 88, 100));
+
+        ludoteca.agregar(new VideojuegoRol("Skyrim", "PC", 95, 120, 50));
+        ludoteca.agregar(new VideojuegoDeportivo("FIFA", "PS5", 85, 200, "Futbol"));
+        ludoteca.agregar(new VideojuegoEstrategia("Age of Empires", "PC", 90, 80, 4));
+        ludoteca.agregar(new VideojuegoOnline("Fortnite", "PC", 80, 300, 100));
 
         System.out.println(ludoteca);
 
