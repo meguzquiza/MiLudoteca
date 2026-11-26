@@ -25,7 +25,7 @@ public class Main {
         ludoteca.añadir(new VideojuegoOnline("Fortnite", "PC", 80, 300, 100));
 
         ludoteca.listar();
-        System.out.println("Puntuación media: " + ludoteca.calcularPuntuacionMedia());       //line ade texto de la media
+        System.out.printf("Puntuación media: %.2f%n", ludoteca.calcularPuntuacionMedia());       //line ade texto de la media
         Videojuego mejorValorado = ludoteca.obtenerMejorValorado();
         System.out.println("Mejor valorado -> " + mejorValorado);      //linea de texto del mejor valorado
 
