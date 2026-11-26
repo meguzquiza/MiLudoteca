@@ -77,4 +77,7 @@ public class Videojuego {
         return "Titulo: " + titulo + ", Plataforma: " + plataforma + ", Puntuacion: " + puntuacion + ", Horas jugadas: " + horasJugadas;
     }
 
+    public void mostrarFicha() {
+        System.out.println(toString());
+    }   
 }

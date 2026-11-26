@@ -8,7 +8,7 @@ public class Ludoteca {
         videojuegos = new ArrayList<>();
     }
     
-    public void agregar(Videojuego videojuego) {
+    public void añadir(Videojuego videojuego) {
         videojuegos.add(videojuego);
     }
 
@@ -34,5 +34,43 @@ public class Ludoteca {
         }
 
         return null;
+    }
+
+    public void listar() {
+        for (Videojuego videojuego : videojuegos) {
+            videojuego.mostrarFicha();
+        }
+    }
+
+    public double calcularPuntuacionMedia() {
+
+        if (videojuegos.isEmpty()) {
+            return 0.0;
+        }
+
+        int suma = 0;
+
+        for (Videojuego videojuego : videojuegos) {
+            suma += videojuego.getPuntuacion();
+        }
+
+        return (double) suma / videojuegos.size();
+    }
+
+    public Videojuego obtenerMejorValorado() {
+
+        if (videojuegos.isEmpty()) {
+            return null;
+        }
+
+        Videojuego mejor = videojuegos.get(0);
+
+        for (Videojuego videojuego : videojuegos) {
+            if (videojuego.getPuntuacion() > mejor.getPuntuacion()) {
+                mejor = videojuego;
+            }
+        }
+
+        return mejor;
     }
 }
