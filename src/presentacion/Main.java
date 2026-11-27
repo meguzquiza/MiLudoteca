@@ -14,6 +14,10 @@ public class Main {
         Ludoteca ludoteca = new Ludoteca();
         ludoteca.cargar();
         
+        //Comentamos los metodos para agregar los videojuegos para evitar duplicados una vez iniciado. Al iniciarse ya carga el archivo que 
+        // tiene estos datos por lo que se duplicarian si volvemos a añadirlos al ejecutarse.
+
+        /*
         ludoteca.añadir(new Videojuego("Red Dead Redemption 2", "PS5", 99, 120));
         ludoteca.añadir(new Videojuego("Elden Ring", "PC", 95, 85));
         ludoteca.añadir(new Videojuego("God of War", "PS5", 94, 60));
@@ -24,6 +28,7 @@ public class Main {
         ludoteca.añadir(new VideojuegoDeportivo("FIFA", "PS5", 85, 200, "Futbol"));
         ludoteca.añadir(new VideojuegoEstrategia("Age of Empires", "PC", 90, 80, 4));
         ludoteca.añadir(new VideojuegoOnline("Fortnite", "PC", 80, 300, 100));
+        */
 
         ludoteca.listar();
         System.out.printf("Puntuación media: %.2f%n", ludoteca.calcularPuntuacionMedia());       //line ade texto de la media
