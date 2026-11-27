@@ -5,8 +5,9 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.Serializable;
 
-public class Ludoteca {
+public class Ludoteca implements Serializable {
     
     private ArrayList<Videojuego> videojuegos;
     public Ludoteca() {
