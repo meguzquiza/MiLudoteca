@@ -1,5 +1,10 @@
 package dominio;
 import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 public class Ludoteca {
     
@@ -72,5 +77,31 @@ public class Ludoteca {
         }
 
         return mejor;
+    }
+    
+    public void guardar() {
+        try (ObjectOutputStream salida = new ObjectOutputStream(
+        new FileOutputStream("ludoteca.dat"))) {
+            salida.writeObject(videojuegos);
+            System.out.println("Guardado correctamente.");
+        }   
+        catch (IOException e) {
+            System.out.println("Error de guardado: " + e.getMessage());
+        }
+    }
+
+    public void cargar() {
+        try (ObjectInputStream entrada = new ObjectInputStream(
+            new FileInputStream("ludoteca.dat"))) {
+            videojuegos = (ArrayList<Videojuego>) entrada.readObject();
+            System.out.println("Ludoteca cargada correctamente.");
+
+        }
+        catch (IOException e) {
+            System.out.println("error al cargar el fichero. Creando ludoteca vacía.");
+        } 
+        catch (ClassNotFoundException e) {
+            System.out.println("Error al reconocer los datos del fichero.");
+        }
     }
 }
